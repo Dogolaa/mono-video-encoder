@@ -1,0 +1,27 @@
+spring:
+  # Configuração do Banco de Dados
+  datasource:
+    url: jdbc:postgresql://database:5432/default_database
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  # Configuração do JPA (Hibernate)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # Configuração do Servidor de Email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: SEU-EMAIL@gmail.com           # <-- PREENCHA AQUI NO SEU ARQUIVO LOCAL
+    password: SUA-SENHA-DE-APP-DO-GOOGLE    # <-- PREENCHA AQUI NO SEU ARQUIVO LOCAL
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        debug: true
