@@ -1,9 +1,25 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/default_database
+    username: ${DB_USER:root}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+
   mail:
     host: smtp.gmail.com
     port: 587
-    username: email@gmail.com
-    password: SENHA
+    username: ${MAIL_USER}
+    password: ${MAIL_PASS}
     properties:
       mail:
         smtp:

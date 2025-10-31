@@ -1,6 +1,6 @@
 services:
   database:
-    image: 'postgres:latest'
+    image: postgres:15
     container_name: mono_video_encoder_db
     restart: always
     ports:
@@ -23,6 +23,9 @@ services:
       - '8082:8080'
     environment:
       SPRING_PROFILES_ACTIVE: docker
+      SPRING_CONFIG_LOCATION: file:/config/
+    volumes:
+      - ./src/main/resources/application-docker.yml:/config/application-docker.yml
 
 
 volumes:
