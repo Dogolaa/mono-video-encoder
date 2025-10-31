@@ -114,8 +114,3 @@ Use uma ferramenta de API (Postman, Insomnia) para simular o upload de um usuár
 3.  **Na Pasta do Projeto:** Abra a pasta `videos_processados` (que o Docker criou). Você verá os arquivos `..._FINAL.mp4` aparecendo **um por um**, assim que terminam.
 4.  **No seu E-mail:** Após os 24 segundos, você receberá um *único* e-mail com o relatório do lote.
 5.  **No Banco de Dados:** (Use DBeaver ou pgAdmin para conectar em `localhost:5433`) Verifique a tabela `processamento_videos`. Você verá os registros sendo atualizados de `PENDENTE` -\> `PROCESSANDO` -\> `CONCLUIDO`.
-
-<!-- end list -->
-
-```
-```
