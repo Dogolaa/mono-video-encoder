@@ -32,6 +32,13 @@ public class LoteProcessingService {
         this.videoOrchestrator = videoOrchestrator;
         this.persistenceService = persistenceService;
         this.emailService = emailService;
+
+        try {
+            Files.createDirectories(uploadDir);
+        } catch (IOException e) {
+            log.error("Falha ao criar diretório de upload! {}", uploadDir, e);
+            throw new RuntimeException("Falha ao criar diretório de upload! O serviço não pode iniciar.", e);
+        }
     }
 
     public String processarLote(List<MultipartFile> videoFiles, String emailDestino, String nomeUsuario) {
