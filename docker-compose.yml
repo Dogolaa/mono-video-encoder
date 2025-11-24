@@ -26,6 +26,7 @@ services:
       SPRING_CONFIG_LOCATION: file:/config/
     volumes:
       - ./src/main/resources/application-docker.yml:/config/application-docker.yml
+      - ./uploads:/app/uploads
 
 
 volumes:
