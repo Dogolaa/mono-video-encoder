@@ -13,6 +13,12 @@ O objetivo deste "Vilão" é demonstrar na prática os problemas clássicos de u
 3.  **Orquestração Rígida:** Dentro de cada vídeo, as etapas (Resize, Watermark, Transcode) também são chamadas em sequência.
 4.  **Escalabilidade Ineficiente:** Se o gargalo for a transcodificação (uso de CPU), não é possível escalar apenas essa parte. Seria necessário escalar a aplicação inteira (o `.jar` todo), incluindo o `Controller` e o `EmailService`.
 
+## Desenvolvedores
+
+* Caio Fernando Dias
+* Lucas Dogo de Souza Pezzuto
+* Matheus Malvão Barbosa
+
 ---
 
 ## Stack de Tecnologias
